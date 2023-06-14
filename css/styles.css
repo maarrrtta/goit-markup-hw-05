@@ -83,6 +83,9 @@ a {
 .first-line-agency:hover::after {
     width: 100%;
     left: 0;
+    transition-property: width, left;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .first-line-portfolio {
@@ -101,6 +104,9 @@ a {
 .first-line-portfolio:hover::after {
     width: 100%;
     left: 0;
+    transition-property: width, left;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .first-line-contact {
@@ -119,6 +125,9 @@ a {
 .first-line-contact:hover::after {
     width: 100%;
     left: 0;
+    transition-property: width, left;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .first-line a {
@@ -128,6 +137,9 @@ a {
 .first-line a:hover,
 .first-line a:focus {
     color: var(--brand-color-logo);
+    transition-property: color;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .icon-nav {
@@ -154,11 +166,17 @@ a {
 .first-line-contactinfo a:hover ,
 .first-line-contactinfo a:focus {
     color: var(--brand-color-logo);
+    transition-property: color;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .first-line-contactinfo a:hover .icon-nav,
 .first-line-contactinfo a:focus .icon-nav {
     fill: var(--icon-color-blue);
+    transition-property: fill;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .first-section-background {
@@ -364,6 +382,9 @@ figcaption {
     cursor: pointer;
     background-color: var(--icon-color-blue);
     fill: var(--brand-color);
+    transition-property: background-color,fill, pointer;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .fifth-section-headline {
@@ -385,6 +406,9 @@ figcaption {
     cursor: pointer;
     fill: var(--icon-color-blue);
     border-color: var(--icon-color-blue);
+    transition-property: border-color, fill, pointer;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 div[class="clients-icons"]>svg {
@@ -447,6 +471,9 @@ display: flex;
 .footer-contact:hover,
 .footer-contact:focus {
     color: var(--brand-color-logo);
+    transition-property: color;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .footer-flex {
@@ -478,6 +505,9 @@ display: flex;
 .footer-sm-icon:focus {
     background-color: var(--icon-color-blue);
     cursor: pointer;
+    transition-property: background-color, pointer;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .portfolio-buttons {
@@ -510,6 +540,9 @@ display: flex;
     background: #2196F3;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    transition-property: color, background, box-shadow, border-radius;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .portfolio-all-photos {
@@ -519,10 +552,13 @@ display: flex;
     padding: 0 15px;
 }
 
-.portfolio-all-photos li:hover,
-.portfolio-all-photos li:focus {
+.portfolio-box:hover,
+.portfolio-box:focus {
     cursor: pointer;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition-property: pointer, box-shadow;
+            transition-duration: var(--default-time);
+            transition-timing-function: var(--default-timing-function);
 }
 
 .portfolio-photo-border{
@@ -547,33 +583,32 @@ display: flex;
     color: var(--brand-color-description);
 }
 
-.photo-box img {
+.photo-box {
     position: relative;
     overflow: hidden;
 }
 
-.text-overly {
+.text-overlay {
     position: absolute;
-    top: 0;
+    top: 100%;
    left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 49px 45px 24px;
+    padding: 49px 45px 49px 24px;
     font-family: 'Roboto';
     font-size: 18px;
     line-height: 1.56;
      letter-spacing: 0.03em;
     color: var(--brand-color);
     background: var(--portfolio-box-background);
-        transform: translateY(100%);
-        transition-property: transform;
-        transition-duration: var(--default-time);
-        transition-timing-function: var(--default-timing-function);
 }
 
-.card-overly:hover .textoverly {
-    transform: translateY(0);
+.photo-box:hover .text-overlay {
+    transform: translateY(-100%);
+    transition-property: transform;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-timing-function);
 }
 
 .backdrop {
