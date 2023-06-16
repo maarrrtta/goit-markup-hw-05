@@ -88,6 +88,16 @@ a {
         transition-timing-function: var(--default-timing-function);
 }
 
+.agency-blue::after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    bottom: -28px;
+    background: var(--brand-color-logo);
+    width: 100%;
+    left: 0;
+}
+
 .first-line-portfolio {
     margin-right: 46px;
     position: relative;
@@ -107,6 +117,16 @@ a {
     transition-property: width, left;
         transition-duration: var(--default-time);
         transition-timing-function: var(--default-timing-function);
+}
+
+.portfolio-blue::after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    bottom: -28px;
+    background: var(--brand-color-logo);
+    width: 100%;
+    left: 0;
 }
 
 .first-line-contact {
@@ -604,7 +624,7 @@ display: flex;
     background: var(--portfolio-box-background);
 }
 
-.photo-box:hover .text-overlay {
+.portfolio-all-photos div:hover .text-overlay {
     transform: translateY(-100%);
     transition-property: transform;
         transition-duration: var(--default-time);
